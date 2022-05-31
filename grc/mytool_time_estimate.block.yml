@@ -1,0 +1,23 @@
+id: mytool_time_estimate
+label: time_estimate
+category: '[Mytool]'
+templates:
+  imports: from gnuradio import mytool
+  make: mytool.time_estimate(${display_level}, ${time_unit})
+parameters:
+- id: display_level
+  label: Display_level
+  dtype: int
+- id: time_unit
+  label: Time_unit
+  dtype: string
+  
+inputs:
+- label: time_start
+  domain: message
+  optional: true
+- label: time_end
+  domain: message
+  optional: true
+
+file_format: 1
